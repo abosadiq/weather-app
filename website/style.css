@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fffff8;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+}
+.headline {
+  font-size: 2rem;
+  margin-bottom: 2.6rem;
+  font-weight: 500;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  background-image: linear-gradient(to right, #191970, #0000cd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.zip {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.zip-label,
+.feel-label {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.zip input,
+.feel textarea,
+#generate {
+  width: 50%;
+  align-self: center;
+}
+.zip input {
+  height: 2rem;
+}
+.feel {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+#generate {
+  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  border: 1px solid #191970;
+  cursor: pointer;
+  color: #2f4f4f;
+  position: relative;
+  z-index: 9999;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+#generate:hover {
+  color: #fff;
+}
+#generate::before {
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2f4f4f;
+  border: 1px solid #2f4f4f;
+  transition: all 0.4s;
+  z-index: -1;
+}
+#generate:hover::before {
+  top: 0;
+}
+#selectid {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.entry {
+}
+
+#entryHolder {
+  width: 100%;
+}
+
+.select {
+  padding: 40px 100px;
+  background-color: teal;
+  color: #fff;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  transform-origin: top;
+}
+
+#date {
+}
+
+#temp {
+  margin-top: 10px;
+}
+
+#content {
+  margin-top: 10px;
+}
+
+.headline {
+}
+.title {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #000080;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  border: 1px solid #191970;
+}
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+}
