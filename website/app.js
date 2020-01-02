@@ -33,7 +33,7 @@ const zipCode = () => {
   });
 };
 // when search by city name
-const cistName = () => {
+const cityName = () => {
   weatherDataBYCity(`${city}${zip.value}&appid=${API_KEY}`).then(data => {
     postData("/add", {
       date: newDate,
@@ -52,7 +52,7 @@ btn.addEventListener("click", () => {
     zipCode();
   } else if (selectid.value == "val2") {
     zip.placeholder = "Search By City Name...";
-    cistName();
+    cityName();
   }
 });
 
